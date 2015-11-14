@@ -1,0 +1,17 @@
+services:
+    lazy_dependency:
+        class: SaveTheCode\LazyDependenciesBundle\Service\DependencyService
+        lazy: true
+
+    main_with_lazy_dependency:
+        class: SaveTheCode\LazyDependenciesBundle\Service\MainService
+        arguments:
+            - "@lazy_dependency"
+
+    dependency:
+        class: SaveTheCode\LazyDependenciesBundle\Service\DependencyService
+
+    main:
+        class: SaveTheCode\LazyDependenciesBundle\Service\MainService
+        arguments:
+            - "@dependency"

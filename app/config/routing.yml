@@ -1,0 +1,4 @@
+save_the_code_lazy_dependencies:
+    resource: "@SaveTheCodeLazyDependenciesBundle/Controller/"
+    type:     annotation
+    prefix:   /
